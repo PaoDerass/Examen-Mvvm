@@ -5,23 +5,28 @@
              Title="Cálculo de Descuento">
 
     <VerticalStackLayout Padding="20">
-       
-        <Entry x:Name="Pro1" Placeholder="Producto 1" Keyboard="Numeric" Text="{Binding Pro1}" />
-        <Entry x:Name="Pro2" Placeholder="Producto 2" Keyboard="Numeric" Text="{Binding Pro2}" />
-        <Entry x:Name="Pro3" Placeholder="Producto 3" Keyboard="Numeric" Text="{Binding Pro3}" />
 
-        
+        <Label Text="Ingresa Producto 1" />
+        <Entry Placeholder="Producto 1" Keyboard="Numeric" Text="{Binding Pro1, Mode=TwoWay}" />
+        <Label Text="Ingresa Producto 2" />
+        <Entry Placeholder="Producto 2" Keyboard="Numeric" Text="{Binding Pro2, Mode=TwoWay}" />
+        <Label Text="Ingresa Producto 3" />
+        <Entry Placeholder="Producto 3" Keyboard="Numeric" Text="{Binding Pro3, Mode=TwoWay}" />
+
+
         <Label Text="Subtotal" />
-        <Label Text="{Binding Subtotal}" />
+        <Label Text="{Binding Subtotal, StringFormat='Lps. {0}'}" />
+
 
         <Label Text="Descuento" />
-        <Label Text="{Binding Descuento}" />
-
-        <Label Text="Total a Pagar" />
-        <Label Text="{Binding TotalPagar}" />
+        <Label Text="{Binding Descuento, StringFormat='Lps. {0}'}" />
 
         
-        <Button Text="Calcular el Descuento que aplica" Command="{Binding CalcCommand}" />
-        <Button Text="Limpiar Campos" Command="{Binding LimpCommand}" />
+        <Label Text="Total a Pagar" />
+        <Label Text="{Binding TotalPagar, StringFormat='Lps. {0}'}" />
+
+        
+        <Button Text="Calcular el Descuento que aplica" Command="{Binding CalcularCommand}" />
+        <Button Text="Limpiar Campos" Command="{Binding LimpiarCommand}" />
     </VerticalStackLayout>
 </ContentPage>
