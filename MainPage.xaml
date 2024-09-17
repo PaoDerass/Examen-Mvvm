@@ -2,31 +2,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ExamenMvvm"
              x:Class="ExamenMvvm.MainPage"
-             Title="Cálculo de Descuento">
-
-    <VerticalStackLayout Padding="20">
-
-        <Label Text="Ingresa Producto 1" />
-        <Entry Placeholder="Producto 1" Keyboard="Numeric" Text="{Binding Pro1, Mode=TwoWay}" />
-        <Label Text="Ingresa Producto 2" />
-        <Entry Placeholder="Producto 2" Keyboard="Numeric" Text="{Binding Pro2, Mode=TwoWay}" />
-        <Label Text="Ingresa Producto 3" />
-        <Entry Placeholder="Producto 3" Keyboard="Numeric" Text="{Binding Pro3, Mode=TwoWay}" />
+             Title="Cálculo de Descuento"   >
+    
+    <AbsoluteLayout>
+        <Image Source="fresas.png"
+           Aspect="AspectFill"
+           AbsoluteLayout.LayoutBounds="0,0,1,1"
+           AbsoluteLayout.LayoutFlags="All" />
 
 
-        <Label Text="Subtotal" />
-        <Label Text="{Binding Subtotal, StringFormat='Lps. {0}'}" />
+
+        <VerticalStackLayout  Padding="20"  >
+
+            <Label Text="Ingresa Producto 1"  TextColor="#Ff6c86" Margin="0,20,0,0" FontFamily="OpenSans-Semibold"/>
+            <Entry Placeholder="Producto 1"  Keyboard="Numeric" Text="{Binding Pro1, Mode=TwoWay} " BackgroundColor="#edbdd5"  />
+            <Label Text="Ingresa Producto 2" TextColor="#Ff6c86" Margin="0,20,0,0" FontFamily="OpenSans-Semibold"/>
+            <Entry Placeholder="Producto 2"  Keyboard="Numeric" Text="{Binding Pro2, Mode=TwoWay}"  BackgroundColor="#edbdd5" />
+            <Label Text="Ingresa Producto 3"  TextColor="#Ff6c86" Margin="0,20,0,0" FontFamily="OpenSans-Semibold"/>
+            <Entry Placeholder="Producto 3" Keyboard="Numeric" Text="{Binding Pro3, Mode=TwoWay}" BackgroundColor="#edbdd5" />
 
 
-        <Label Text="Descuento" />
-        <Label Text="{Binding Descuento, StringFormat='Lps. {0}'}" />
+            <Label  Text="Subtotal"  TextColor="#dd4866" FontFamily="OpenSans-Semibold" Margin="0,20,0,0"/>
+            <Label Text="{Binding Subtotal, StringFormat='Lps. {0}'} " TextColor="#Ff6c86" />
 
-        
-        <Label Text="Total a Pagar" />
-        <Label Text="{Binding TotalPagar, StringFormat='Lps. {0}'}" />
 
-        
-        <Button Text="Calcular el Descuento que aplica" Command="{Binding CalcularCommand}" />
-        <Button Text="Limpiar Campos" Command="{Binding LimpiarCommand}" />
+            <Label Text="Descuento" TextColor="#dd4866" FontFamily="OpenSans-Semibold"/>
+            <Label Text="{Binding Descuento, StringFormat='Lps. {0}'}" TextColor="#Ff6c86" />
+
+
+            <Label Text="Total a Pagar" TextColor="#dd4866" FontFamily="OpenSans-Semibold"/>
+            <Label Text="{Binding TotalPagar, StringFormat='Lps. {0}'} " TextColor="#Ff6c86" />
+
+
+            <Button Text="Calcular el Descuento que aplica" Command="{Binding CalcularCommand}" Margin="50,20,0,0" BackgroundColor="#F68BA2" />
+            <Button Text="Limpiar Campos" Command="{Binding LimpiarCommand}" Margin="50 ,20,0,0" BackgroundColor="#F68BA2" />
     </VerticalStackLayout>
+    </AbsoluteLayout>
 </ContentPage>

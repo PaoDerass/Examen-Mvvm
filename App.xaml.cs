@@ -9,7 +9,15 @@ namespace ExamenMvvm
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+           
+            var mainPage = new MainPage();
+
+           
+            MainPage = new NavigationPage(mainPage)
+            {
+                BarBackgroundColor = Color.FromArgb("#F68BA2"), 
+                BarTextColor = Colors.White       
+            };
         }
     }
 }
