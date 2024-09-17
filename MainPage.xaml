@@ -5,7 +5,7 @@
              Title="Cálculo de Descuento"   >
     
     <AbsoluteLayout>
-        <Image Source="fresas.png"
+        <Image Source="azul.png"
            Aspect="AspectFill"
            AbsoluteLayout.LayoutBounds="0,0,1,1"
            AbsoluteLayout.LayoutFlags="All" />
