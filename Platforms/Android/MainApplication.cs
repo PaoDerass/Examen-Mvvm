@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Examen_Mvvm
+namespace ExamenMvvm
 {
     [Application]
     public class MainApplication : MauiApplication

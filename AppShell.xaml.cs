@@ -1,4 +1,4 @@
-﻿namespace Examen_Mvvm
+﻿namespace ExamenMvvm
 {
     public partial class AppShell : Shell
     {
